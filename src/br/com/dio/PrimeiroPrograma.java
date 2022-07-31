@@ -1,13 +1,19 @@
 package br.com.dio;
 
-import br.com.dio.model.Gato;
+import br.com.dio.model.Cc;
+import br.com.dio.model.Cp;
+import br.com.dio.model.Iconta;
 
 public class PrimeiroPrograma {
     public static void main(String[] args) {
-        Gato g1 = new Gato("nome1", "azul", 2);
-        Gato g2 = new Gato("nome1", "azul", 2);
+        Iconta cc = new Cc();
+        Iconta cp = new Cp();
 
-        System.out.println(g1);
-//        System.out.println("Hello world");
+        cc.depositar(100.0);
+        cc.transferir(100.0, cp);
+
+        cc.imprimirExtrato();
+        cp.imprimirExtrato();
+
     }
 }
